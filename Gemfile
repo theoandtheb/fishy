@@ -26,7 +26,8 @@ gem 'puma', '~> 3.7'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 group :development, :production do
-  gem 'capistrano', '~> 3.10.1',   require: false
+  gem 'capistrano', '~> 3.7.2',   require: false
+  gem 'capistrano-ssh-doctor',   require: false
   gem 'capistrano-bundler',   require: false
   gem 'capistrano-rails',   require: false
   # gem 'capistrano-rbenv', github: "capistrano/rbenv"

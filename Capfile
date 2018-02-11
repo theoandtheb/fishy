@@ -1,12 +1,17 @@
 # Load DSL and Setup Up Stages
 require 'capistrano/setup'
 require 'capistrano/deploy'
+require "capistrano/scm/git"
+install_plugin Capistrano::SCM::Git
+require 'capistrano/ssh_doctor'
 
 # require 'capistrano/rbenv'
 require 'capistrano/secrets_yml'
 require 'capistrano/postgresql'
 require 'capistrano/rails/migrations'
 require 'capistrano/puma'
+install_plugin Capistrano::Puma
+install_plugin Capistrano::Puma::Workers
 require 'capistrano/bundler'
 # set :rbenv_type, :user # or :system, depends on your rbenv setup
 # set :rbenv_ruby, '2.3.1'
