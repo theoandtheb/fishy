@@ -46,8 +46,8 @@ role :db,  %w{deploy@45.79.134.31}
 # --------------
  set :ssh_options, {
    keys: %w(/~/.ssh/id_rsa),
-   forward_agent: false,
-   auth_methods: %w(password)
+   forward_agent: true,
+   user: 'deploy'
  }
 #
 # The server-based syntax can be used to override options:
